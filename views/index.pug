@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+
+  form(hx-post="/users", hx-target="#users", hx-swap="afterbegin", hx-on:submit="this.reset()")
+    input.edit(type="text", name="userName")
+    button(type="submit") Add User
+
+  input(hx-get="/users", hx-target="#users", name="search", hx-trigger="keyup changed delay:200ms", placeholder="Search")
+  #users(hx-get="/users", hx-trigger="load")
