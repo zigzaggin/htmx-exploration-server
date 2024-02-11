@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/', (req, res) => {
-    db = db.filter(v => v.userName !== req.query.userName);
+    db = db.filter(v => v.userName !== req.body.userName);
     res.send();
 });
 

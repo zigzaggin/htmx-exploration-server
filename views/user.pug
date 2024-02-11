@@ -1,2 +1,2 @@
 p #{user.userName}
-    button(hx-delete="/users?userName="+ user.userName, hx-target="closest p") Delete
+    button(hx-delete="/users", name="userName", value=user.userName, hx-target="closest p") Delete
